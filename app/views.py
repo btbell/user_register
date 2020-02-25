@@ -35,14 +35,14 @@ def register(request):
       if 'profile_pic' in request.FILES:
         print('found it')
         profile.profile_pic = request.FILES['profile_pic']
-        profile.save()
-        registered = True
-      else:
-        print(user_form.errors,profile_form.errors)
+      profile.save()
+      registered = True
     else:
+      print(user_form.errors,profile_form.errors)
+  else:
       user_form = UserForm()
       profile_form = UserProfileInfoForm()
-    return render(request, 'app/registration.html',
+  return render(request, 'app/registration.html',
                   {'user_form':user_form,
                    'profile_form':profile_form,
                    'registered':registered})

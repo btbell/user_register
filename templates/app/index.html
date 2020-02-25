@@ -1,13 +1,13 @@
 {% extends "app/base.html" %}
-{% block body_block %}
+{% block content %}
 <div class="container">
   <div class="jumbotron">
-    <h1>Welcome to the Djungle !</h1>
-    {% if user.is_authenticated %}
-        <h2>Hello {{ user.username }}</h2>
-    {% else %}
-        <h2>Register or Login if you'd like to</h2>
-    {% endif %}
+  <h1>Welcome to REGGIE!</h1>
+  {% if user.is_authenticated %}
+    <h2>Hello {{ user.username }}</h2>
+  {% else %}
+    <h2><a href="{% url 'app:register' %}">Register</a> or <a href="{% url 'app:user_login' %}">Login</a> if you'd like to</h2>
+  {% endif %}
   </div>
 </div>
 {% endblock %}

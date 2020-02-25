@@ -1,0 +1,20 @@
+.logo-text {
+  color: red;
+}
+.register-form input[type=text], input[type=password], input[type=email], input[type=url] {
+  display: block;
+}
+.register-form p {
+  line-height: .8em;
+}
+.login-form input[type=text], input[type=password] {
+  display: block;
+  margin-bottom: .4em;
+}
+.login-form label {
+  line-height: .8em;
+}
+.helptext {
+  display: block;
+  font-size: 60%;
+}
